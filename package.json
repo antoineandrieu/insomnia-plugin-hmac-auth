@@ -1,0 +1,27 @@
+{
+  "name": "insomnia-plugin-hmac-auth",
+  "version": "1.0.0",
+  "description": "An Insomnia plugin to handle HMAC authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antoineandrieu/insomnia-plugin-hmac-auth"
+  },
+  "keywords": [
+    "insomnia",
+    "insomnia-plugin"
+  ],
+  "author": "Antoine Andrieu <antoine@andrieu.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoineandrieu/insomnia-plugin-hmac-auth/issues"
+  },
+  "homepage": "https://github.com/antoineandrieu/insomnia-plugin-hmac-auth#readme",
+  "insomnia": {
+    "name": "insomnia-plugin-hmac-auth",
+    "description": "An Insomnia plugin for handling authentication when integrating with Mastercard APIs."
+  }
+}
