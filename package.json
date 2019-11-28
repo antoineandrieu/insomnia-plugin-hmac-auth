@@ -22,6 +22,6 @@
   "homepage": "https://github.com/antoineandrieu/insomnia-plugin-hmac-auth#readme",
   "insomnia": {
     "name": "insomnia-plugin-hmac-auth",
-    "description": "An Insomnia plugin for handling authentication when integrating with Mastercard APIs."
+    "description": "An Insomnia plugin that add a customizable HMAC template tag."
   }
 }
