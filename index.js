@@ -61,7 +61,6 @@ module.exports.templateTags = [
             );
             const httpMethod = request.method;
             hmac.update(httpMethod);
-            console.log(httpMethod);
 
             // Regex source : https://tools.ietf.org/html/rfc3986#appendix-B
             const match = request.url.match(
@@ -73,13 +72,12 @@ module.exports.templateTags = [
             }
             hmac.update(uri);
 
-            const body = JSON.stringify(JSON.parse(request.body.text));
-            console.log(typeof body);
-            console.log(body);
-            const contentHash = crypto.createHash('md5');
-            contentHash.update(body);
-
-            hmac.update(contentHash.digest(encoding));
+            const body = request.body.text;
+            if (body) {
+                const contentHash = crypto.createHash('md5');
+                contentHash.update(JSON.stringify(JSON.parse(body)));
+                hmac.update(contentHash.digest(encoding));
+            }
 
             return `${identifier} ${time}:${hmac.digest(encoding)}`;
         }
